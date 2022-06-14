@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style type="text/css">
+            .content {
+                margin-left: 50%;
+                margin-top: 50px;
+                transform: translateX(-50%);
+                width: 800px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            input {
+                font-size: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content">
+            <h1 id="show-value"></h1>
+            <input id="input-value" placeholder="new value" type="text" />
+            <input id="submit-value" type="submit" value="Set Value" onClick="clickButton()" />
+        </div>
+
+        <script type="text/javascript">
+
+            function clickButton() {
+                console.log("clicked!")
+                var input = document.getElementById('input-value');               
+            };
+
+            // Updates the header content
+            function updateDisplay(value) {
+                document.getElementById('show-value').textContent = value;
+            }      
+        </script>
+    </body>
+</html>
